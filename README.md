@@ -16,7 +16,7 @@ This is simple BookStore webapplication where you can:
 
 This app is based on asp.net core (MVC)  ,and needs sql sever to run. 
 ```
-+ Open the souce code with Visual Studio 2023 or higher
++ Open the souce code with Visual Studio (Recommend to use 2022 or higher).
 + The sql server must have a database called BookStore
 + In our code we have used several NuGet Package Manger
   + Microsoft.EntityFrameworkCore
