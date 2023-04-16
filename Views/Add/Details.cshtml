@@ -1,0 +1,48 @@
+﻿@model Book
+<div class="border p-3 mt-4">
+    <div class="row pb-2 text-center">
+        <h2 class="text-primary">Book Details</h2>
+        <hr />
+        
+    </div>
+
+    <div class="row pb-2 text-end">
+       <a asp-controller="Add" asp-action="Edit" asp-route-id="@ViewBag.Book.Id">
+            <h3 class="text text-primary ">Update</h3>
+       </a> 
+    </div>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <h4>Book Name : @ViewBag.Book.Name</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Book Author : @ViewBag.Book.AuthorName</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Book Language : @ViewBag.Book.Language</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Book Details : @ViewBag.Book.BookDetails</h4>
+                </td>
+            </tr>
+        
+        </tbody>
+    </table>
+ </div>
+@section Scripts
+    {
+    @{
+        <partial name="_ValidationScriptsPartial"></partial>
+    }
+}
+
+
+
