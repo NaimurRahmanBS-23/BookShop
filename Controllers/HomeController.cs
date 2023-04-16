@@ -16,8 +16,22 @@ namespace BookStore.Controllers
  
         public IActionResult Index()
         {
-            IEnumerable<Book> bookList=_db.Books.ToList();
+            IEnumerable<Book> bookList=_db.Books;
             return View(bookList);
+        }
+        public IActionResult Add()
+        {
+            
+            return View();
+        }
+        //post method
+        [HttpPost]
+        [IgnoreAntiforgeryToken]
+        public IActionResult Index(Book book)
+        {
+            _db.Books.Add(book);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

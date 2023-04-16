@@ -11,6 +11,6 @@ namespace BookStore.Models
         public string AuthorName { get; set; }
         public string Language  { get; set; }
         public string BookDetails { get; set; }
-       // public byte[] Image { get; set; }
+
     }
 }

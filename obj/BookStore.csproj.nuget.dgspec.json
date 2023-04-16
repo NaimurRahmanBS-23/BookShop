@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bs780\\Desktop\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\bs780\\Desktop\\App\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bs780\\Desktop\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\bs780\\Desktop\\App\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bs780\\Desktop\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\bs780\\Desktop\\App\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\bs780\\Desktop\\BookStore\\BookStore.csproj",
+        "projectPath": "C:\\Users\\bs780\\Desktop\\App\\BookStore\\BookStore.csproj",
         "packagesPath": "C:\\Users\\bs780\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bs780\\Desktop\\BookStore\\obj\\",
+        "outputPath": "C:\\Users\\bs780\\Desktop\\App\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bs780\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.13, )"
             }
           },
           "imports": [
