@@ -6,11 +6,21 @@
         
     </div>
 
-    <div class="row pb-2 text-end">
-       <a asp-controller="Add" asp-action="Edit" asp-route-id="@ViewBag.Book.Id">
-            <h3 class="text text-primary ">Update</h3>
-       </a> 
-    </div>
+   
+    <table>
+        <td>
+            <div class="w-75 btn-group" role="group">
+                 <a asp-controller="Add" asp-action="Edit" asp-route-id="@ViewBag.Book.Id" style="white-space: nowrap;">
+                 <h3 class="text text-primary ">Update</h3>
+                 </a>
+                <a asp-controller="Add" asp-action="Delete" asp-route-id="@ViewBag.Book.Id" style="padding-left:10px">
+                    <h3 class="text text-primary ">Delete</h3>
+                </a>
+
+            </div>
+        </td>
+       
+    </table>
     <table>
         <tbody>
             <tr>
