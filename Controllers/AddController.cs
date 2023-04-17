@@ -1,6 +1,7 @@
 ﻿using BookStore.Data;
 using BookStore.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.Controllers
 {
@@ -40,6 +41,7 @@ namespace BookStore.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Book obj)
         {
+            
             _db.Books.Update(obj);
             _db.SaveChanges();
 
@@ -55,6 +57,27 @@ namespace BookStore.Controllers
             if (book == null) return NotFound();
            ViewBag.Book = book;
             return View();
+        }
+
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id <= 0)
+            {
+                return NotFound();
+            }
+            var book = _db.Books.Find(id);
+            if (book == null) return NotFound();
+
+            return View(book);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Book obj)
+        {
+            _db.Books.Remove(obj);
+            _db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
