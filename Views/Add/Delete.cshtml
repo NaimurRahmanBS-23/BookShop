@@ -2,33 +2,33 @@
 <form method="post">
     <div class="border p-3 mt-4">
         <div class="row pb-2 text-center">
-            <h2 class="text-primary">Add a new book</h2>
+            <h2 class="text-primary">Delete this Book</h2>
             <hr />
 
         </div>
         <div class="mb-3">
             <label asp-for="Name"></label>
-            <input asp-for="Name" class=" form-control" />
+            <input asp-for="Name"  disabled class=" form-control" />
             <span asp-validation-for="Name" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="AuthorName"></label>
-            <input asp-for="AuthorName" class=" form-control" />
+            <input asp-for="AuthorName" disabled class=" form-control" />
             <span asp-validation-for="AuthorName" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="Language"></label>
-            <input asp-for="Language" class=" form-control" />
+            <input asp-for="Language" disabled class=" form-control" />
             <span asp-validation-for="Language" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="BookDetails"></label>
-            <input asp-for="BookDetails" class=" form-control" />
+            <input asp-for="BookDetails" disabled class=" form-control" />
             <span asp-validation-for="BookDetails" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+        <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
         <a asp-controller="Home" asp-action="Index" class="btn btn-primary" style="width:150px">Back to Home</a>
     </div>
 </form>

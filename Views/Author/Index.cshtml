@@ -1,0 +1,39 @@
+﻿@model List<Book>
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    var firstName = Model.FirstOrDefault().AuthorName;
+    if (firstName == null) firstName = "Unknown Author";
+
+}
+<h2>@firstName's  Book List</h2>
+<hr />
+@if (Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th style="width:100px">Book ID</th>
+                <th>Book Name</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Id</td>
+                    <td>@book.Name</td>
+                    @*<td>@book.PublishDate.ToShortDateString()</td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No books found for this author.</p>
+}
+
+
