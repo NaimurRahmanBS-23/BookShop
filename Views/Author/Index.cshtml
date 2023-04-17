@@ -9,6 +9,20 @@
 }
 <h2>@firstName's  Book List</h2>
 <hr />
+<table class="text-end " style="width:100%">
+    <td>
+        <div class=" btn-group" role="group">
+            <a asp-controller="Author" asp-action="Edit" asp-route-id="@Model[0].Id "style="white-space: nowrap;">
+                <h3 class="text text-primary ">Update</h3>
+            </a>
+            <a asp-controller="Author" asp-action="Delete" asp-route-id="@Model[0].Id" style="padding-left:10px">
+                <h3 class="text text-primary ">Delete</h3>
+            </a>
+
+        </div>
+    </td>
+
+</table>
 @if (Model.Any())
 {
     <table>
