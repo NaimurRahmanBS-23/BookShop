@@ -53,5 +53,36 @@ namespace BookStore.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index","Home");
         }
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var name = _db.Books.Find(id);
+
+
+            return View(name);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Book obj)
+        {
+            if (obj == null)
+            {
+                return NotFound();
+            }
+            var name = _db.Books.Find(obj.Id).AuthorName;
+            var books = _db.Books.Where(x => x.AuthorName == name).ToList();
+            foreach (var book in books)
+            {
+                book.AuthorName = obj.AuthorName;
+                //_db.Books.Update(book);
+
+            }
+            _db.Books.RemoveRange(books);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
