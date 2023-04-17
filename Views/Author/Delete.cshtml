@@ -2,7 +2,7 @@
 <form method="post">
     <div class="border p-3 mt-4">
         <div class="row pb-2 text-center">
-            <h2 class="text-primary">Update Author Details</h2>
+            <h2 class="text-primary">Deleting Author</h2>
             <hr />
 
         </div>
@@ -10,12 +10,12 @@
 
         <div class="mb-3" >
             <label asp-for="AuthorName"></label>
-            <input asp-for="AuthorName" class=" form-control" />
+            <input asp-for="AuthorName" disabled class=" form-control" />
             <span asp-validation-for="AuthorName" class="text-danger"></span>
         </div>
 
 
-        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+        <button type="submit" class="btn btn-primary" style="width:150px">Delete</button>
         <a asp-controller="Home" asp-action="Index" class="btn btn-primary" style="width:150px">Back to Home</a>
         </div>
 </form>
